@@ -93,13 +93,14 @@ import java.util.List;
         private class Võiduvõimalused{
             private Ruut[] ruudud;
 
-            public Võiduvõimalused(Ruut... ruudud) {  // Konstruktor, mis lubab siis võtta täpselt kolm elementi massiivi.
+            public Võiduvõimalused(Ruut... ruudud) {  // Konstruktor, mis lubab võtta täpselt kolm elementi massiivi.
                 this.ruudud = ruudud;
             }
             public boolean võitis(){ // Meetod otsustab kas read või veerus on tekkinud võiduolukord
                 if(ruudud[0].getVäärtus().isEmpty()) // Alustan esimese väärtuse vaatamisega ning kui see tühi on pole vaja teisi edasi vaadata
                     return false;
-                return ruudud[0].getVäärtus().equals(ruudud[1].getVäärtus()) && ruudud[0].getVäärtus().equals(ruudud[2].getVäärtus()); // Kui eelmine tingimuslause ei tagastanud false, tagastan kontrolli, kus vaatab kas esimene on võrdne teise ja kolmandaga väärtusega.
+                return ruudud[0].getVäärtus().equals(ruudud[1].getVäärtus()) && ruudud[0].getVäärtus().equals(ruudud[2].getVäärtus());// Kui eelmine tingimuslause ei tagastanud false, tagastan kontrolli, kus vaatab kas esimene on võrdne teise ja kolmandaga väärtusega.
+
             }
 
         }
