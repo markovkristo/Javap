@@ -62,7 +62,6 @@ import java.util.List;
             pealava.setScene(new Scene(joonista()));
             pealava.show();
         }
-        public boolean
 
 
         private void mänguSeis(){

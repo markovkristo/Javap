@@ -1,3 +1,4 @@
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -7,9 +8,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 
 public class Traps extends Application {
     private char praeguneMängija = 'X';
@@ -37,6 +37,7 @@ public class Traps extends Application {
         pealava.show();
     }
 
+    // Meetod, mis käib kõik ruudud läbi ning vaatab, kas mingi koht on veel tühi ja kui ei ole, siis tagastab true.
     public boolean kasLaudOnTäis() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -48,14 +49,17 @@ public class Traps extends Application {
     }
 
     public boolean kasVõitis(char mängija) {
+        // Käib läbi kõik vastava rea elemendid ning kontrollib, kas need on samasugused, kui on, siis tagastab true ja teine meetod väljastab vastava teksti ekraanile.
         for (int i = 0; i < 3; i++) {
             if (ruut[i][0].getMängija() == mängija && ruut[i][1].getMängija() == mängija && ruut[i][2].getMängija() == mängija)
                 return true;
         }
+        // Käib läbi kõik vastava veeru elemendid ning kontrollib, kas need on samasugused, kui on, siis tagastab true ja teine meetod väljastab vastava teksti ekraanile.
         for (int i = 0; i < 3; i++) {
             if (ruut[0][i].getMängija() == mängija && ruut[1][i].getMängija() == mängija && ruut[2][i].getMängija() == mängija)
                 return true;
         }
+        // Käib läbi kõik diagonaalide elemendid ning kontrollib, kas need on samasugused, kui on, siis tagastab true ja teine meetod väljastab vastava teksti ekraanile.
         if (ruut[0][0].getMängija() == mängija && ruut[1][1].getMängija() == mängija && ruut[2][2].getMängija() == mängija)
             return true;
         if (ruut[0][2].getMängija() == mängija && ruut[1][1].getMängija() == mängija && ruut[2][0].getMängija() == mängija)
@@ -65,38 +69,37 @@ public class Traps extends Application {
 
     public class Laud extends Pane {
         private char mängija = ' ';
-        private Text kujund = new Text();
 
+        // Meetod, mis teeb laua ning reageerib iga ruudu vajutusele.
         public Laud() {
             setStyle("-fx-border-color: black");
             this.setPrefSize(200, 200);
             this.setOnMouseClicked(e -> NupuVajutus());
         }
 
+        // Meetod, mis tegutseb siis kui toimub nupuvajutus.
         private void NupuVajutus() {
-            if(mängija == ' ' && praeguneMängija != ' '){
+            if(mängija == ' ' && praeguneMängija != ' '){ // Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
                 setMängija(praeguneMängija);
-                if(kasVõitis(praeguneMängija)){
+                if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     staatus.setText(praeguneMängija + " võitis!");
                 }
-                else if(kasLaudOnTäis()){
+                else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
                     praeguneMängija = ' ';
                 }
-                else {
+                else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
                     praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
                     staatus.setText(praeguneMängija + " peab käima");
                 }
             }
-
         }
 
         public char getMängija() {
             return mängija;
         }
 
-        public void  setMängija(char x) {
-            kujund.setFont(Font.font(75));
+        public void  setMängija(char x) { // Meetod, mis joonistab vastava mängija käigu mängulauale.
             mängija = x;
             if (mängija == 'X') {
                 Line joon1 = new Line(10,10,this.getWidth() - 10, this.getHeight() - 10);
