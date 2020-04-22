@@ -27,14 +27,14 @@ public class Menüü  extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Pane root = new Pane();
-        root.setPrefSize(800,600);
+        root.setPrefSize(600,600);
         InputStream is = Files.newInputStream(Paths.get("C:\\Users\\Erik\\Desktop\\OOP_projekt_2\\src\\taust.png"));
         Image img = new Image(is);
         is.close();
 
         ImageView imgView = new ImageView(img);
-        imgView.setFitWidth(800);
-        imgView.setFitHeight(400);
+        imgView.setFitWidth(600);
+        imgView.setFitHeight(600);
 
         mänguMenüü = new MänguMenüü();
         root.getChildren().addAll(imgView, mänguMenüü);
@@ -66,7 +66,7 @@ public class Menüü  extends Application {
                 System.exit(0);
             });
             menüü0.getChildren().addAll(mängi,välju);
-            Rectangle taust = new Rectangle(800,400);
+            Rectangle taust = new Rectangle(600,600);
             taust.setFill(Color.GREY);
             taust.setOpacity(0.4);
             getChildren().addAll(taust, menüü0);
