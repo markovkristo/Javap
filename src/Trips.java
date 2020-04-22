@@ -5,6 +5,8 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -28,9 +30,7 @@ import java.util.List;
         private Pane juur = new Pane();
 
         private Parent joonista(){
-
             juur.setPrefSize(600,600);
-
             for (int i = 0; i < 3 ; i++) {
                 for (int j = 0; j < 3; j++) {
                     Ruut ruut = new Ruut();
@@ -62,6 +62,8 @@ import java.util.List;
             pealava.setScene(new Scene(joonista()));
             pealava.show();
         }
+        public boolean
+
 
         private void mänguSeis(){
             for (Võiduvõimalused  võimalus: võiduVõimalused) {
@@ -84,7 +86,7 @@ import java.util.List;
             juur.getChildren().add(joon);
 
             Timeline animatsioon = new Timeline();
-            animatsioon.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5),
+            animatsioon.getKeyFrames().add(new KeyFrame(Duration.seconds(0.3),
                     new KeyValue(joon.endXProperty(), võimalus.ruudud[2].xKeskkoht()),
                     new KeyValue(joon.endYProperty(), võimalus.ruudud[2].yKeskkoht())));
             animatsioon.play();
