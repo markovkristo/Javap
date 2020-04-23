@@ -1,7 +1,13 @@
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -9,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -20,7 +27,7 @@ public class Traps extends Application {
     private char praeguneMängija = 'X';
     private Laud[][] ruut = new Laud[3][3];
     private Label staatus = new Label("X- i kord on");
-
+    private Label võitja = new Label();
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -35,7 +42,6 @@ public class Traps extends Application {
         BorderPane border = new BorderPane(); // n-ö Main konteiner.
         border.setCenter(pane);
         border.setBottom(staatus);
-
         Scene stseen = new Scene(border, 600, 600);
         pealava.setTitle("Trips-Traps-Trull");
         pealava.setScene(stseen);
@@ -95,11 +101,19 @@ public class Traps extends Application {
     public class Laud extends Pane {
         private char mängija = ' ';
 
-        // Meetod, mis teeb laua ning reageerib iga ruudu vajutusele.
+        // Konstruktor
         public Laud() {
-            setStyle("-fx-border-color: red");
+            setStyle("-fx-border-color: black");
+            DropShadow vari = new DropShadow(20, Color.DARKRED);
             this.setPrefSize(600,600);
             this.setOnMouseClicked(e -> NupuVajutus());
+            this.setOnKeyPressed(e -> {
+                if(e.getCode() == KeyCode.DOWN)
+                    NupuVajutus();
+                else if(e.getCode() == KeyCode.ENTER)
+                    this.setEffect(vari);
+
+            });
         }
 
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
@@ -133,10 +147,12 @@ public class Traps extends Application {
                 joon1.endXProperty().bind(this.widthProperty().subtract(10));
                 joon1.endYProperty().bind(this.heightProperty().subtract(10));
                 joon1.setStrokeWidth(10.3);
+                joon1.setStroke(Color.HOTPINK);
                 Line joon2 = new Line(10, this.getHeight()-10,this.getWidth()-10,10);
                 joon2.endXProperty().bind(this.widthProperty().subtract(10));
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
                 joon2.setStrokeWidth(10.3);
+                joon2.setStroke(Color.DODGERBLUE);
                 logitamine("X", 0);
                 getChildren().addAll(joon1,joon2);
             } else if (mängija == 'O') {
@@ -145,8 +161,9 @@ public class Traps extends Application {
                 ring.centerYProperty().bind(this.heightProperty().divide(2));
                 ring.radiusXProperty().bind(this.widthProperty().divide(2).subtract(10));
                 ring.radiusYProperty().bind(this.heightProperty().divide(2).subtract(10));
-                ring.setStroke(Color.BLACK);
-                ring.setFill(Color.PINK);
+                ring.setStroke(Color.DODGERBLUE);
+                ring.setStrokeWidth(5.0);
+                ring.setFill(Color.HOTPINK);
                 logitamine("O", 0);
                 getChildren().add(ring);
             }
