@@ -24,6 +24,7 @@ import java.nio.file.Paths;
 
 public class Menüü  extends Application {
     private MänguMenüü mänguMenüü;
+    private Trips mäng;
     @Override
     public void start(Stage primaryStage) throws Exception{ //Tekitab akna, mille sisse tuleb menüü. Taustapilt asub samas kaustas, kus ka klass ise.
         Pane root = new Pane();
@@ -31,11 +32,10 @@ public class Menüü  extends Application {
         InputStream is = Files.newInputStream(Paths.get("taust.png"));
         Image img = new Image(is);
         is.close();
-
         ImageView imgView = new ImageView(img);
         imgView.setFitWidth(600);
         imgView.setFitHeight(600);
-
+        mäng = new Trips();
         mänguMenüü = new MänguMenüü();
         root.getChildren().addAll(imgView, mänguMenüü);
         Scene scene = new Scene(root);
