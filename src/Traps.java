@@ -10,6 +10,11 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 
 public class Traps extends Application {
     private char praeguneMängija = 'X';
@@ -35,6 +40,26 @@ public class Traps extends Application {
         pealava.setTitle("Trips-Traps-Trull");
         pealava.setScene(stseen);
         pealava.show();
+    }
+    public void logitamine(String mängija, int staatus) {
+        File logi = new File("logi.txt");
+        try {
+            if(staatus == 0){
+            if (!logi.exists()) {
+                logi.createNewFile();
+            }
+            PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
+            kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
+            kirjuta.close();}
+            else{
+                PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
+                kirjuta.append("Mängija " + mängija + " võitis." + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
+                kirjuta.close();
+            }
+
+        } catch (IOException e) {
+            System.out.println("Logi error");
+        }
     }
 
     // Meetod, mis käib kõik ruudud läbi ning vaatab, kas mingi koht on veel tühi ja kui ei ole, siis tagastab true.
@@ -83,6 +108,7 @@ public class Traps extends Application {
                 setMängija(praeguneMängija);
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     staatus.setText(praeguneMängija + " võitis!");
+                    logitamine(String.valueOf(praeguneMängija), 1);
                 }
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
@@ -109,7 +135,7 @@ public class Traps extends Application {
                 Line joon2 = new Line(10, this.getHeight()-10,this.getWidth()-10,10);
                 joon2.endXProperty().bind(this.widthProperty().subtract(10));
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
-
+                logitamine("X", 0);
                 getChildren().addAll(joon1,joon2);
             } else if (mängija == 'O') {
                 Ellipse ring = new Ellipse(this. getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2-10, this.getHeight() / 2 - 10);
@@ -119,6 +145,7 @@ public class Traps extends Application {
                 ring.radiusYProperty().bind(this.heightProperty().divide(2).subtract(10));
                 ring.setStroke(Color.BLACK);
                 ring.setFill(Color.PINK);
+                logitamine("O", 0);
                 getChildren().add(ring);
             }
         }

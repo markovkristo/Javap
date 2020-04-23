@@ -1,12 +1,25 @@
-Mängija X sisestas käigu ruudule 2020-04-23 14:10:16.18
-Mängija O sisestas käigu ruudule 2020-04-23 14:10:16.653
-Mängija X sisestas käigu ruudule 2020-04-23 14:10:17.104
-Mängija O sisestas käigu ruudule 2020-04-23 14:10:17.646
-Mängija X sisestas käigu ruudule 2020-04-23 14:10:18.147
-Mängija X sisestas käigu ruudule -1||2020-04-23 14:24:59.004
-Mängija O sisestas käigu ruudule -1||2020-04-23 14:24:59.562
-Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:00.059
-Mängija O sisestas käigu ruudule -1||2020-04-23 14:25:02.559
-Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:03.116
-Mängija O sisestas käigu ruudule -1||2020-04-23 14:25:03.684
-Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:04.382
+Mängija X sisestas käigu ruudule ||2020-04-23 14:52:09.303
+Mängija O sisestas käigu ruudule ||2020-04-23 14:52:09.916
+Mängija X sisestas käigu ruudule ||2020-04-23 14:52:10.596
+Mängija O sisestas käigu ruudule ||2020-04-23 14:52:11.391
+Mängija X sisestas käigu ruudule ||2020-04-23 14:52:12.434
+Mängija O sisestas käigu ruudule ||2020-04-23 14:52:13.074
+Mängija X sisestas käigu ruudule ||2020-04-23 14:52:14.032
+Mängija O sisestas käigu ruudule ||2020-04-23 14:52:14.436
+Mängija X sisestas käigu ruudule ||2020-04-23 14:56:42.141
+Mängija O sisestas käigu ruudule ||2020-04-23 14:56:42.75
+Mängija X sisestas käigu ruudule ||2020-04-23 14:56:43.388
+Mängija O sisestas käigu ruudule ||2020-04-23 14:56:43.886
+Mängija X sisestas käigu ruudule ||2020-04-23 14:56:44.512
+Mängija X võitis.||2020-04-23 14:56:44.513
+Mängija X sisestas käigu ruudule ||2020-04-23 14:56:45.401
+Mängija X võitis.||2020-04-23 14:56:45.402
+Mängija X sisestas käigu ruudule ||2020-04-23 14:57:09.812
+Mängija O sisestas käigu ruudule ||2020-04-23 14:57:14.044
+Mängija X sisestas käigu ruudule ||2020-04-23 14:57:18.249
+Mängija O sisestas käigu ruudule ||2020-04-23 14:57:20.583
+Mängija X sisestas käigu ruudule ||2020-04-23 14:57:23.984
+Mängija O sisestas käigu ruudule ||2020-04-23 14:57:28.211
+Mängija X sisestas käigu ruudule ||2020-04-23 14:57:31.611
+Mängija O sisestas käigu ruudule ||2020-04-23 14:57:35.188
+Mängija O võitis.||2020-04-23 14:57:35.189
