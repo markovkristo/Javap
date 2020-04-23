@@ -38,7 +38,7 @@ import java.util.List;
                     logi.createNewFile();
                 }
                 PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
-                kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
+                kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
                 kirjuta.close();
             } catch (IOException e) {
                 System.out.println("Logi error");

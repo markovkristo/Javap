@@ -3,3 +3,10 @@ Mängija O sisestas käigu ruudule 2020-04-23 14:10:16.653
 Mängija X sisestas käigu ruudule 2020-04-23 14:10:17.104
 Mängija O sisestas käigu ruudule 2020-04-23 14:10:17.646
 Mängija X sisestas käigu ruudule 2020-04-23 14:10:18.147
+Mängija X sisestas käigu ruudule -1||2020-04-23 14:24:59.004
+Mängija O sisestas käigu ruudule -1||2020-04-23 14:24:59.562
+Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:00.059
+Mängija O sisestas käigu ruudule -1||2020-04-23 14:25:02.559
+Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:03.116
+Mängija O sisestas käigu ruudule -1||2020-04-23 14:25:03.684
+Mängija X sisestas käigu ruudule -1||2020-04-23 14:25:04.382
