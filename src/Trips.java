@@ -60,6 +60,7 @@ import java.util.List;
                     juur.getChildren().add(ruut);
 
                     laud[j][i] = ruut;
+                    laud[j][i] = ruut;
                 }
             }
             // Käin read for-tsükliga läbi ja lisan need võiduvõimalustesse.
