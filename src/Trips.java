@@ -31,6 +31,19 @@ import java.util.List;
         private List<Võiduvõimalused> võiduVõimalused = new ArrayList<>();
         private Pane juur = new Pane();
 
+        public void logitamine(String mängija) {
+            File logi = new File("logi.txt");
+            try {
+                if (!logi.exists()) {
+                    logi.createNewFile();
+                }
+                PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
+                kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
+                kirjuta.close();
+            } catch (IOException e) {
+                System.out.println("Logi error");
+            }
+        }
 
 
         public Trips() throws FileNotFoundException, UnsupportedEncodingException, IOException {
@@ -131,6 +144,7 @@ import java.util.List;
                     if (event.getButton() == MouseButton.PRIMARY){// Nata kahtlane koht, et kui tahad X joonistada on vasak hiireklahv ja kui O-d ss parem.
                         if(!Xkord)
                             return;
+                        logitamine("X");
                         joonistaX();
                         Xkord = false;
                         mänguSeis();
@@ -138,6 +152,7 @@ import java.util.List;
                     else if(event.getButton() == MouseButton.SECONDARY){
                         if(Xkord)
                             return;
+                        logitamine("O");
                         joonistaO();
                         Xkord = true;
                         mänguSeis();
