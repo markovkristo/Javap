@@ -1,0 +1,36 @@
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:34.347
+Mängija O sisestas käigu ruudule ||2020-04-23 15:48:35.42
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:36.176
+Mängija O sisestas käigu ruudule ||2020-04-23 15:48:36.944
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:37.561
+Mängija O sisestas käigu ruudule ||2020-04-23 15:48:38.105
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:38.681
+Mängija X võitis.||2020-04-23 15:48:38.682
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:40.016
+Mängija X võitis.||2020-04-23 15:48:40.018
+Mängija X sisestas käigu ruudule ||2020-04-23 15:48:40.52
+Mängija X võitis.||2020-04-23 15:48:40.521
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:45.829
+Mängija O sisestas käigu ruudule ||2020-04-23 15:49:46.258
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:46.664
+Mängija O sisestas käigu ruudule ||2020-04-23 15:49:46.976
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:47.249
+Mängija O sisestas käigu ruudule ||2020-04-23 15:49:47.601
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:47.976
+Mängija X võitis.||2020-04-23 15:49:47.978
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:48.314
+Mängija X võitis.||2020-04-23 15:49:48.315
+Mängija X sisestas käigu ruudule ||2020-04-23 15:49:48.656
+Mängija X võitis.||2020-04-23 15:49:48.657
+Mängija X sisestas käigu ruudule ||2020-04-23 15:51:25.996
+Mängija O sisestas käigu ruudule ||2020-04-23 15:51:26.448
+Mängija X sisestas käigu ruudule ||2020-04-23 15:51:26.825
+Mängija O sisestas käigu ruudule ||2020-04-23 15:51:27.512
+Mängija X sisestas käigu ruudule ||2020-04-23 15:51:28.104
+Mängija O sisestas käigu ruudule ||2020-04-23 15:51:28.448
+Mängija X sisestas käigu ruudule ||2020-04-23 15:51:28.848
+Mängija O sisestas käigu ruudule ||2020-04-23 15:51:29.376
+Mängija X sisestas käigu ruudule ||2020-04-23 15:53:49.059
+Mängija O sisestas käigu ruudule ||2020-04-23 15:53:49.418
+Mängija X sisestas käigu ruudule ||2020-04-23 15:53:49.752
+Mängija O sisestas käigu ruudule ||2020-04-23 15:53:50.136

@@ -97,8 +97,8 @@ public class Traps extends Application {
 
         // Meetod, mis teeb laua ning reageerib iga ruudu vajutusele.
         public Laud() {
-            setStyle("-fx-border-color: black");
-            this.setPrefSize(200, 200);
+            setStyle("-fx-border-color: red");
+            this.setPrefSize(600,600);
             this.setOnMouseClicked(e -> NupuVajutus());
         }
 
@@ -109,6 +109,7 @@ public class Traps extends Application {
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     staatus.setText(praeguneMängija + " võitis!");
                     logitamine(String.valueOf(praeguneMängija), 1);
+
                 }
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
@@ -131,10 +132,11 @@ public class Traps extends Application {
                 Line joon1 = new Line(10,10,this.getWidth() - 10, this.getHeight() - 10);
                 joon1.endXProperty().bind(this.widthProperty().subtract(10));
                 joon1.endYProperty().bind(this.heightProperty().subtract(10));
-
+                joon1.setStrokeWidth(10.3);
                 Line joon2 = new Line(10, this.getHeight()-10,this.getWidth()-10,10);
                 joon2.endXProperty().bind(this.widthProperty().subtract(10));
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
+                joon2.setStrokeWidth(10.3);
                 logitamine("X", 0);
                 getChildren().addAll(joon1,joon2);
             } else if (mängija == 'O') {
