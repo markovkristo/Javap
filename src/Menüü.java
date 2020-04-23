@@ -25,10 +25,10 @@ import java.nio.file.Paths;
 public class Menüü  extends Application {
     private MänguMenüü mänguMenüü;
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception{ //Tekitab akna, mille sisse tuleb menüü. Taustapilt asub samas kaustas, kus ka klass ise.
         Pane root = new Pane();
         root.setPrefSize(600,600);
-        InputStream is = Files.newInputStream(Paths.get("C:\\Users\\Erik\\Desktop\\OOP_projekt_2\\src\\taust.png"));
+        InputStream is = Files.newInputStream(Paths.get("taust.png"));
         Image img = new Image(is);
         is.close();
 
@@ -54,6 +54,7 @@ public class Menüü  extends Application {
 
 
             MenüüNupp mängi = new MenüüNupp("Mängi");
+
             mängi.setOnMouseClicked(event ->{
                 //FadeTransition ft = new FadeTransition(Duration.seconds(0.5),this);
                 //ft.setFromValue(1);
@@ -61,10 +62,13 @@ public class Menüü  extends Application {
                 //ft.setOnFinished(evt -> this.setVisible(false));
                 //ft.play();
             });
-            MenüüNupp välju = new MenüüNupp("Välju");
+
+            MenüüNupp välju = new MenüüNupp("Välju"); //Tekitan nupu, mida vajutades sulgub mäng.
+
             välju.setOnMouseClicked(event ->{
                 System.exit(0);
             });
+
             menüü0.getChildren().addAll(mängi,välju);
             Rectangle taust = new Rectangle(600,600);
             taust.setFill(Color.GREY);
@@ -79,12 +83,10 @@ public class Menüü  extends Application {
         public MenüüNupp(String nimi){
             tekst = new Text(nimi);
             tekst.setFont(tekst.getFont().font(20));
-
             Rectangle taust = new Rectangle(250, 30);
             taust.setOpacity(0.6);
             taust.setFill(Color.BLACK);
             taust.setEffect(new GaussianBlur(3.5));
-
             setAlignment(Pos.CENTER_LEFT);
             setRotate(-0.5);
             getChildren().addAll(taust,tekst);
@@ -95,6 +97,7 @@ public class Menüü  extends Application {
                 taust.setFill(Color.WHITE);
                 tekst.setFill(Color.BLACK);
             });
+
             setOnMouseExited(event ->{
                 taust.setTranslateX(0);
                 tekst.setTranslateX(0);
@@ -104,14 +107,12 @@ public class Menüü  extends Application {
 
             DropShadow ds = new DropShadow(50, Color.WHITE);
             ds.setInput(new Glow());
-
             setOnMousePressed(event -> setEffect(ds));
             setOnMouseReleased(event -> setEffect(null));
-
-
         }
 
     }
+
 
     public static void main(String[] args) {
         launch(args);
