@@ -27,7 +27,7 @@ import java.io.PrintWriter;
 public class Traps extends Application {
     private char praeguneMängija = 'X';
     private Laud[][] ruut = new Laud[3][3];
-    private Label staatus = new Label("X- i kord on");
+    private Label staatus = new Label( "Käik on mängijal: " + esimene);
     private Label võitja = new Label();
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
@@ -125,12 +125,12 @@ public class Traps extends Application {
             if(mängija == ' ' && praeguneMängija != ' '){ // Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
                 setMängija(praeguneMängija);
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
-                    staatus.setText(praeguneMängija + " võitis!");
                     if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
+                        staatus.setText(esimene + " võitis!");
                         logitamine(esimene, 1);
                     }
                     else{//Logitab teise mängija võidu korral.
-                        System.out.println("Teine");
+                        staatus.setText(teine + " võitis!");
                         logitamine(teine, 1);
                     }
 
@@ -141,7 +141,8 @@ public class Traps extends Application {
                 }
                 else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
                     praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
-                    staatus.setText(praeguneMängija + " peab käima");
+                    if(praeguneMängija=='X') staatus.setText(esimene + " peab käima");
+                    else staatus.setText(teine + " peab käima");
                 }
             }
         }
