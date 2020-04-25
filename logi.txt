@@ -23,3 +23,104 @@ Mängija O sisestas käigu ruudule ||2020-04-23 14:57:28.211
 Mängija X sisestas käigu ruudule ||2020-04-23 14:57:31.611
 Mängija O sisestas käigu ruudule ||2020-04-23 14:57:35.188
 Mängija O võitis.||2020-04-23 14:57:35.189
+Mängija X sisestas käigu ruudule ||2020-04-25 16:57:51.096
+Mängija O sisestas käigu ruudule ||2020-04-25 16:57:52.794
+Mängija X sisestas käigu ruudule ||2020-04-25 16:57:54.425
+Mängija O sisestas käigu ruudule ||2020-04-25 16:57:55.962
+Mängija X sisestas käigu ruudule ||2020-04-25 16:57:57.785
+Mängija O sisestas käigu ruudule ||2020-04-25 16:57:59.487
+Mängija X sisestas käigu ruudule ||2020-04-25 16:57:59.971
+Mängija O sisestas käigu ruudule ||2020-04-25 16:58:00.507
+Mängija O võitis.||2020-04-25 16:58:00.508
+Mängija O sisestas käigu ruudule ||2020-04-25 16:58:02.093
+Mängija O võitis.||2020-04-25 16:58:02.094
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:47.251
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:48.528
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:49.063
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:49.663
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:50.164
+Mängija null sisestas käigu ruudule ||2020-04-25 17:02:50.694
+Mängija O võitis.||2020-04-25 17:02:50.694
+Mängija null sisestas käigu ruudule ||2020-04-25 17:03:33.151
+Mängija null sisestas käigu ruudule ||2020-04-25 17:03:33.777
+Mängija null sisestas käigu ruudule ||2020-04-25 17:03:53.289
+Mängija null sisestas käigu ruudule ||2020-04-25 17:06:30.826
+Mängija null sisestas käigu ruudule ||2020-04-25 17:07:25.898
+Mängija null sisestas käigu ruudule ||2020-04-25 17:07:27.366
+Mängija null sisestas käigu ruudule ||2020-04-25 17:07:27.991
+Mängija null sisestas käigu ruudule ||2020-04-25 17:07:28.667
+Mängija null sisestas käigu ruudule ||2020-04-25 17:07:29.2
+Mängija X võitis.||2020-04-25 17:07:29.2
+Mängija a sisestas käigu ruudule ||2020-04-25 17:09:25.627
+Mängija b sisestas käigu ruudule ||2020-04-25 17:09:26.112
+Mängija a sisestas käigu ruudule ||2020-04-25 17:09:27.368
+Mängija b sisestas käigu ruudule ||2020-04-25 17:09:27.651
+Mängija a sisestas käigu ruudule ||2020-04-25 17:09:28.006
+Mängija X võitis.||2020-04-25 17:09:28.007
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:11:48.58
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:11:49.254
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:11:49.691
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:11:50.07
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:11:50.532
+Mängija X võitis.||2020-04-25 17:11:50.533
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:12:45.619
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:12:46.899
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:12:47.348
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:12:51.126
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:12:51.515
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:12:53.482
+Mängija O võitis.||2020-04-25 17:12:53.484
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:14:30.045
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:14:30.33
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:14:30.623
+Mängija Kristo sisestas käigu ruudule ||2020-04-25 17:14:30.919
+Mängija Erik sisestas käigu ruudule ||2020-04-25 17:14:31.24
+Mängija Kristo võitis.||2020-04-25 17:14:31.241
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:13.441
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:34:13.886
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:14.346
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:34:14.771
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:15.242
+Mängija 2 võitis.||2020-04-25 17:34:15.244
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:27.863
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:34:28.24
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:28.639
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:34:29.134
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:34:29.703
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:34:30.11
+Mängija 2 võitis.||2020-04-25 17:34:30.111
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:32.046
+Mängija 2' sisestas käigu ruudule ||2020-04-25 17:36:32.267
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:32.524
+Mängija 2' sisestas käigu ruudule ||2020-04-25 17:36:32.767
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:34.099
+Mängija 2' sisestas käigu ruudule ||2020-04-25 17:36:35.305
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:36.181
+Mängija 2' sisestas käigu ruudule ||2020-04-25 17:36:37.387
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:37.832
+Mängija 2' võitis.||2020-04-25 17:36:37.834
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:54.98
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:36:55.502
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:55.938
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:36:56.209
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:36:56.528
+Mängija 2 võitis.||2020-04-25 17:36:56.53
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:25.501
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:37:25.752
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:26.055
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:37:26.299
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:26.742
+Mängija 2 võitis.||2020-04-25 17:37:26.743
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:35.587
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:37:36.423
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:37.033
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:37:38.439
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:37:39.066
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:37:39.527
+Mängija 2 võitis.||2020-04-25 17:37:39.529
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:38:46.804
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:38:47.896
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:38:48.59
+Mängija 2 sisestas käigu ruudule ||2020-04-25 17:38:49.051
+Mängija 1 sisestas käigu ruudule ||2020-04-25 17:38:49.584
+Mängija 1 võitis.||2020-04-25 17:38:49.585

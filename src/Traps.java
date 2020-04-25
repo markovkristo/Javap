@@ -17,6 +17,7 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,6 +29,9 @@ public class Traps extends Application {
     private Laud[][] ruut = new Laud[3][3];
     private Label staatus = new Label("X- i kord on");
     private Label võitja = new Label();
+    static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
+    static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
+
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -122,7 +126,13 @@ public class Traps extends Application {
                 setMängija(praeguneMängija);
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     staatus.setText(praeguneMängija + " võitis!");
-                    logitamine(String.valueOf(praeguneMängija), 1);
+                    if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
+                        logitamine(esimene, 1);
+                    }
+                    else{//Logitab teise mängija võidu korral.
+                        System.out.println("Teine");
+                        logitamine(teine, 1);
+                    }
 
                 }
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
@@ -153,7 +163,7 @@ public class Traps extends Application {
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
                 joon2.setStrokeWidth(10.3);
                 joon2.setStroke(Color.DODGERBLUE);
-                logitamine("X", 0);
+                logitamine(esimene, 0);
                 getChildren().addAll(joon1,joon2);
             } else if (mängija == 'O') {
                 Ellipse ring = new Ellipse(this. getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2-10, this.getHeight() / 2 - 10);
@@ -164,7 +174,7 @@ public class Traps extends Application {
                 ring.setStroke(Color.DODGERBLUE);
                 ring.setStrokeWidth(5.0);
                 ring.setFill(Color.HOTPINK);
-                logitamine("O", 0);
+                logitamine(teine, 0);
                 getChildren().add(ring);
             }
         }
