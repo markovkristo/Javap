@@ -119,6 +119,29 @@ public class Traps extends Application {
 
             });
         }
+        private void lõpp(char kumb) {
+            if (kumb == 'X' || kumb == 'O') {
+                int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?", kumb + " võitis!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
+                        JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
+                if (valik == JOptionPane.NO_OPTION) {
+                    System.exit(0);
+                }//Kui kasutaja valib "Välju", siis mängust väljutakse.
+                String[] args = new String[]{""};
+                if (valik == JOptionPane.YES_OPTION) {
+                    Traps.main(args);
+                }
+            } else {
+                int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?", "Viik!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
+                        JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
+                if (valik == JOptionPane.NO_OPTION) {
+                    System.exit(0);
+                }//Kui kasutaja valib "Välju", siis mängust väljutakse.
+                String[] args = new String[]{""};
+                if (valik == JOptionPane.YES_OPTION) {
+                    Traps.main(args);
+                }
+            }
+        }
 
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
         private void NupuVajutus() {
@@ -128,31 +151,19 @@ public class Traps extends Application {
                     if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
                         staatus.setText(esimene + " võitis!");
                         logitamine(esimene, 1);
-                        int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?",esimene +" võitis!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
-                                JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
-                        if(valik==JOptionPane.NO_OPTION){System.exit(0);}//Kui kasutaja valib "Välju", siis mängust väljutakse.
-                        String[] args = new String[]{""};
-                        if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
+                        lõpp(praeguneMängija);
                     }
                     else{//Logitab teise mängija võidu korral.
                         staatus.setText(teine + " võitis!");
                         logitamine(teine, 1);
-                        int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?",teine +" võitis!",
-                                JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
-                        if(valik==JOptionPane.NO_OPTION){System.exit(0);}
-                        String[] args = new String[]{""};
-                        if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
+                        lõpp(praeguneMängija);
                     }
 
                 }
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
                     praeguneMängija = ' ';
-                    int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?","Viik!",
-                            JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
-                    if(valik==JOptionPane.NO_OPTION){System.exit(0);}
-                    String[] args = new String[]{""};
-                    if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
+                    lõpp(praeguneMängija);
                 }
                 else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
                     praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
