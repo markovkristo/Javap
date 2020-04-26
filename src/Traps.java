@@ -148,6 +148,11 @@ public class Traps extends Application {
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
                     praeguneMängija = ' ';
+                    int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?","Viik!",
+                            JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
+                    if(valik==JOptionPane.NO_OPTION){System.exit(0);}
+                    String[] args = new String[]{""};
+                    if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
                 }
                 else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
                     praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
@@ -194,5 +199,6 @@ public class Traps extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 }
