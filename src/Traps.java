@@ -110,7 +110,6 @@ public class Traps extends Application {
             setStyle("-fx-border-color: black");
             this.setPrefSize(600,600);
             this.setOnMouseClicked(e -> NupuVajutus());
-
         }
         private void lõpp(char kumb) {
             if (kumb == 'X' || kumb == 'O') {
@@ -129,8 +128,7 @@ public class Traps extends Application {
         }
 
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
-        private void NupuVajutus() {
-            if(mängija == ' ' && praeguneMängija != ' '){ // Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
+        private void NupuVajutus() {// Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
                 setMängija(praeguneMängija);
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
@@ -155,7 +153,6 @@ public class Traps extends Application {
                     if(praeguneMängija=='X') staatus.setText(esimene + " peab käima");
                     else staatus.setText(teine + " peab käima");
                 }
-            }
         }
 
         public char getMängija() {
