@@ -31,7 +31,7 @@ public class Traps extends Application {
     private Label võitja = new Label();
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
-
+    Object[] valikud = {"Uuesti", "Välju"};
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -128,10 +128,20 @@ public class Traps extends Application {
                     if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
                         staatus.setText(esimene + " võitis!");
                         logitamine(esimene, 1);
+                        int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?",esimene +" võitis!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
+                                JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
+                        if(valik==JOptionPane.NO_OPTION){System.exit(0);}//Kui kasutaja valib "Välju", siis mängust väljutakse.
+                        String[] args = new String[]{""};
+                        if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
                     }
                     else{//Logitab teise mängija võidu korral.
                         staatus.setText(teine + " võitis!");
                         logitamine(teine, 1);
+                        int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?",teine +" võitis!",
+                                JOptionPane.YES_NO_OPTION,JOptionPane.PLAIN_MESSAGE,null,valikud,null);
+                        if(valik==JOptionPane.NO_OPTION){System.exit(0);}
+                        String[] args = new String[]{""};
+                        if(valik==JOptionPane.YES_OPTION){Traps.main(args);}
                     }
 
                 }
