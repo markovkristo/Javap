@@ -108,16 +108,9 @@ public class Traps extends Application {
         // Konstruktor
         public Laud() {
             setStyle("-fx-border-color: black");
-            DropShadow vari = new DropShadow(20, Color.DARKRED);
             this.setPrefSize(600,600);
             this.setOnMouseClicked(e -> NupuVajutus());
-            this.setOnKeyPressed(e -> {
-                if(e.getCode() == KeyCode.DOWN)
-                    NupuVajutus();
-                else if(e.getCode() == KeyCode.ENTER)
-                    this.setEffect(vari);
 
-            });
         }
         private void lõpp(char kumb) {
             if (kumb == 'X' || kumb == 'O') {
