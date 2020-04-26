@@ -31,7 +31,7 @@ public class Traps extends Application {
     private Label võitja = new Label();
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
-    Object[] valikud = {"Uuesti", "Välju"};
+    Object[] valikud = {"Välju"};
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -55,12 +55,12 @@ public class Traps extends Application {
         File logi = new File("logi.txt");
         try {
             if(staatus == 0){
-            if (!logi.exists()) {
-                logi.createNewFile();
-            }
-            PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
-            kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
-            kirjuta.close();}
+                if (!logi.exists()) {
+                    logi.createNewFile();
+                }
+                PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
+                kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
+                kirjuta.close();}
             else{
                 PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
                 kirjuta.append("Mängija " + mängija + " võitis." + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
@@ -114,24 +114,16 @@ public class Traps extends Application {
         }
         private void lõpp(char kumb) {
             if (kumb == 'X' || kumb == 'O') {
-                int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?", kumb + " võitis!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
-                        JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
-                if (valik == JOptionPane.NO_OPTION) {
-                    System.exit(0);
-                }//Kui kasutaja valib "Välju", siis mängust väljutakse.
-                String[] args = new String[]{""};
+                int valik = JOptionPane.showOptionDialog(null, "Mängu võitis " + kumb, kumb + " võitis!",
+                        JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
                 if (valik == JOptionPane.YES_OPTION) {
-                    Traps.main(args);
+                    System.exit(0);
                 }
             } else {
-                int valik = JOptionPane.showOptionDialog(null, "Kas soovite uuesti mängida või väljuda?", "Viik!",//Kui mäng on läbi, saab kasutaja valiku, kas mängida uuesti või väljuda mängust.
-                        JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
-                if (valik == JOptionPane.NO_OPTION) {
-                    System.exit(0);
-                }//Kui kasutaja valib "Välju", siis mängust väljutakse.
-                String[] args = new String[]{""};
+                int valik = JOptionPane.showOptionDialog(null, "Keegi ei võitnud! Olete samatublid :)", "Viik!",
+                        JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
                 if (valik == JOptionPane.YES_OPTION) {
-                    Traps.main(args);
+                    System.exit(0);
                 }
             }
         }
