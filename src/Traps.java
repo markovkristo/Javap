@@ -1,5 +1,6 @@
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -17,12 +18,13 @@ public class Traps extends Application {
     private char praeguneMängija = 'X';
     private Laud[][] ruut = new Laud[3][3];
     private Label staatus = new Label("Käik on mängijal: " + esimene);
+
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
 
-
     @Override
     public void start(Stage pealava) throws Exception {
+        reegel();
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
 
         for (int i = 0; i < 3; i++) {    // Fikseerin ruutude positsioonin. (i on rea indeks, j on veeru indeks)
@@ -143,9 +145,17 @@ public class Traps extends Application {
         }
 
     }
+    public static void reegel(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Reeglid.display("");
+            }
+        });
+    }
 
     public static void main(String[] args) {
         launch(args);
-
     }
 }
+

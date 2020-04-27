@@ -1,3 +1,4 @@
+import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -6,8 +7,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class Reeglid {
+
+public class Reeglid extends Application {
+
     public static void display(String title){
         Stage aken = new Stage();
         aken.initModality(Modality.APPLICATION_MODAL);
@@ -23,8 +27,9 @@ public class Reeglid {
 
         sisu.setStyle("-fx-font-family: 'DejaVu Sans', Verdana, Helvetica, sans-serif");
         Button closeButton = new Button("Mängi!");
+        String[] args = new String[] {};
+        closeButton.setOnAction(e -> {aken.close();});
 
-        closeButton.setOnAction(e -> aken.close());
 
         Label pealkiri = new Label();
         pealkiri.setText("Reeglid");
@@ -41,4 +46,8 @@ public class Reeglid {
         aken.showAndWait();
     }
 
+    @Override
+    public void start(Stage stage) throws Exception {
+
+    }
 }
