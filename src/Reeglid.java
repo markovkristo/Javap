@@ -13,31 +13,28 @@ public class Reeglid {
         aken.initModality(Modality.APPLICATION_MODAL);
         aken.setTitle(title);
         aken.setMinWidth(600);
-        String tekst=
-                "Mängib kaks mängijat, alustaja on esimene nime sisestaja (X). \n" +
-                        "Vajutage ruudule, kuhu soovite oma käiku teha. \n" +
-                        "Kui X mängija on oma käigu teinud, on järg O mängijal. \n"+
-                        "Kui kumbki mängija saab järjestikku kolm ruutu täis (horisontaalselt, vertikaalselt või diagonaalis, \n" +
-                        " siis on ta mängu võitnud.";
-        String reeglid = "Reeglid";
 
-        Label label = new Label();
-        label.setText(tekst);
+        Label sisu = new Label();
+        sisu.setText("Mängib kaks mängijat, alustaja on esimene nime sisestaja (X). \n" +
+                "Vajutage ruudule, kuhu soovite oma käiku teha. \n" +
+                "Kui X mängija on oma käigu teinud, on järg O mängijal. \n"+
+                "Kui kumbki mängija saab järjestikku kolm ruutu täis (horisontaalselt, vertikaalselt või diagonaalis, \n" +
+                " siis on ta mängu võitnud.");
 
-        label.setStyle("-fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif");
+        sisu.setStyle("-fx-font-family: 'DejaVu Sans', Verdana, Helvetica, sans-serif");
         Button closeButton = new Button("Mängi!");
 
         closeButton.setOnAction(e -> aken.close());
 
         Label pealkiri = new Label();
-        pealkiri.setText(reeglid);
+        pealkiri.setText("Reeglid");
         pealkiri.setStyle("-fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif");
 
         VBox uus = new VBox();
         uus.setAlignment(Pos.CENTER);
         uus.setSpacing(30);
 
-        uus.getChildren().addAll(pealkiri,label,closeButton);
+        uus.getChildren().addAll(pealkiri,sisu,closeButton);
 
         Scene scene = new Scene(uus, 600, 600);
         aken.setScene(scene);

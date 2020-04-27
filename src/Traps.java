@@ -1,13 +1,7 @@
 
-import javafx.animation.FadeTransition;
-import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.effect.Bloom;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.effect.GaussianBlur;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -15,22 +9,18 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 
 public class Traps extends Application {
     private char praeguneMängija = 'X';
     private Laud[][] ruut = new Laud[3][3];
-    private Label staatus = new Label( "Käik on mängijal: " + esimene);
-    private Label võitja = new Label();
+    private Label staatus = new Label("Käik on mängijal: " + esimene);
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
+
+
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -41,7 +31,6 @@ public class Traps extends Application {
                 pane.add(ruut[i][j], j, i);
             }
         }
-
         BorderPane border = new BorderPane(); // n-ö Main konteiner.
         border.setCenter(pane);
         border.setBottom(staatus);
@@ -88,7 +77,7 @@ public class Traps extends Application {
         // Konstruktor
         public Laud() {
             setStyle("-fx-border-color: black");
-            this.setPrefSize(600,600);
+            this.setPrefSize(600, 600);
             this.setOnMouseClicked(e -> NupuVajutus());
 
         }
@@ -96,55 +85,51 @@ public class Traps extends Application {
 
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
         private void NupuVajutus() {
-            if(mängija == ' ' && praeguneMängija != ' '){ // Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
-                setMängija(praeguneMängija);
-                if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
-                    if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
-                        staatus.setText(esimene + " võitis!");
-                        Logitamine.logitamine(esimene, 1);
-                        Lõpuekraan.lõpp(praeguneMängija);
-                    }
-                    else{//Logitab teise mängija võidu korral.
-                        staatus.setText(teine + " võitis!");
-                        Logitamine.logitamine(teine, 1);
-                        Lõpuekraan.lõpp(praeguneMängija);
-                    }
-
-                }
-                else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
-                    staatus.setText("Viik!");
-                    praeguneMängija = ' ';
+            setMängija(praeguneMängija);
+            if (kasVõitis(praeguneMängija)) { // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
+                if (Character.valueOf(praeguneMängija) == 'X') {//Kui võitja on esimene mängija, salvestab selle logisse.
+                    staatus.setText(esimene + " võitis!");
+                    Logitamine.logitamine(esimene, 1);
+                    Lõpuekraan.lõpp(praeguneMängija);
+                } else {//Logitab teise mängija võidu korral.
+                    staatus.setText(teine + " võitis!");
+                    Logitamine.logitamine(teine, 1);
                     Lõpuekraan.lõpp(praeguneMängija);
                 }
-                else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
-                    praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
-                    if(praeguneMängija=='X') staatus.setText(esimene + " peab käima");
-                    else staatus.setText(teine + " peab käima");
-                }
+
+            } else if (kasLaudOnTäis()) { // Kontrollib, kas mängulaud on täis.
+                staatus.setText("Viik!");
+                praeguneMängija = ' ';
+                Lõpuekraan.lõpp(praeguneMängija);
+            } else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
+                praeguneMängija = (praeguneMängija == 'X') ? 'O' : 'X'; // Kui mäng peaks jätkama, siis vahetab praeguse mängija ära.
+                if (praeguneMängija == 'X') staatus.setText(esimene + " peab käima");
+                else staatus.setText(teine + " peab käima");
             }
+
         }
 
         public char getMängija() {
             return mängija;
         }
 
-        public void  setMängija(char x) { // Meetod, mis joonistab vastava mängija käigu mängulauale.
+        public void setMängija(char x) { // Meetod, mis joonistab vastava mängija käigu mängulauale.
             mängija = x;
             if (mängija == 'X') {
-                Line joon1 = new Line(10,10,this.getWidth() - 10, this.getHeight() - 10);
+                Line joon1 = new Line(10, 10, this.getWidth() - 10, this.getHeight() - 10);
                 joon1.endXProperty().bind(this.widthProperty().subtract(10));
                 joon1.endYProperty().bind(this.heightProperty().subtract(10));
                 joon1.setStrokeWidth(10.3);
                 joon1.setStroke(Color.HOTPINK);
-                Line joon2 = new Line(10, this.getHeight()-10,this.getWidth()-10,10);
+                Line joon2 = new Line(10, this.getHeight() - 10, this.getWidth() - 10, 10);
                 joon2.endXProperty().bind(this.widthProperty().subtract(10));
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
                 joon2.setStrokeWidth(10.3);
                 joon2.setStroke(Color.DODGERBLUE);
                 Logitamine.logitamine(esimene, 0);
-                getChildren().addAll(joon1,joon2);
+                getChildren().addAll(joon1, joon2);
             } else if (mängija == 'O') {
-                Ellipse ring = new Ellipse(this. getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2-10, this.getHeight() / 2 - 10);
+                Ellipse ring = new Ellipse(this.getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2 - 10, this.getHeight() / 2 - 10);
                 ring.centerXProperty().bind(this.widthProperty().divide(2));
                 ring.centerYProperty().bind(this.heightProperty().divide(2));
                 ring.radiusXProperty().bind(this.widthProperty().divide(2).subtract(10));
