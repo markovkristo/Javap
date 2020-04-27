@@ -406,3 +406,17 @@ Mängija Arno sisestas käigu ruudule ||2020-04-27 14:11:22.08
 Mängija Parno sisestas käigu ruudule ||2020-04-27 14:11:22.426
 Mängija Arno sisestas käigu ruudule ||2020-04-27 14:11:22.708
 Mängija Arno võitis.||2020-04-27 14:11:22.709
+Mängija a sisestas käigu ruudule ||2020-04-27 14:17:26.492
+Mängija b sisestas käigu ruudule ||2020-04-27 14:17:26.793
+Mängija a sisestas käigu ruudule ||2020-04-27 14:17:27.088
+Mängija b sisestas käigu ruudule ||2020-04-27 14:17:27.677
+Mängija a sisestas käigu ruudule ||2020-04-27 14:17:28.367
+Mängija b sisestas käigu ruudule ||2020-04-27 14:17:29.102
+Mängija a sisestas käigu ruudule ||2020-04-27 14:17:29.495
+Mängija a võitis.||2020-04-27 14:17:29.495
+Mängija a sisestas käigu ruudule ||2020-04-27 14:38:22.029
+Mängija b sisestas käigu ruudule ||2020-04-27 14:38:22.43
+Mängija a sisestas käigu ruudule ||2020-04-27 14:38:22.786
+Mängija b sisestas käigu ruudule ||2020-04-27 14:38:23.151
+Mängija a sisestas käigu ruudule ||2020-04-27 14:38:23.509
+Mängija a võitis.||2020-04-27 14:38:23.51
