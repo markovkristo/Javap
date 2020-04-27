@@ -355,3 +355,54 @@ Mängija Arno sisestas käigu ruudule ||2020-04-26 18:07:42.779
 Mängija Toots sisestas käigu ruudule ||2020-04-26 18:07:43.099
 Mängija Arno sisestas käigu ruudule ||2020-04-26 18:07:43.408
 Mängija Arno võitis.||2020-04-26 18:07:43.409
+Mängija a sisestas käigu ruudule ||2020-04-26 18:11:16.676
+Mängija b sisestas käigu ruudule ||2020-04-26 18:11:16.952
+Mängija a sisestas käigu ruudule ||2020-04-26 18:11:17.245
+Mängija b sisestas käigu ruudule ||2020-04-26 18:11:17.529
+Mängija a sisestas käigu ruudule ||2020-04-26 18:11:17.827
+Mängija a võitis.||2020-04-26 18:11:17.828
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:37.942
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:38.296
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:40.902
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:41.447
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:42.134
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:42.774
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:43.34
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:43.862
+Mängija a sisestas käigu ruudule ||2020-04-27 13:20:44.301
+Mängija a sisestas käigu ruudule ||2020-04-27 14:00:43.116
+Mängija a sisestas käigu ruudule ||2020-04-27 14:03:03.868
+Mängija b sisestas käigu ruudule ||2020-04-27 14:03:04.251
+Mängija a sisestas käigu ruudule ||2020-04-27 14:03:04.653
+Mängija b sisestas käigu ruudule ||2020-04-27 14:03:05.078
+Mängija a sisestas käigu ruudule ||2020-04-27 14:03:05.508
+Mängija a võitis.||2020-04-27 14:03:05.509
+Mängija a sisestas käigu ruudule ||2020-04-27 14:04:01.516
+Mängija b sisestas käigu ruudule ||2020-04-27 14:04:01.801
+Mängija a sisestas käigu ruudule ||2020-04-27 14:04:02.129
+Mängija b sisestas käigu ruudule ||2020-04-27 14:04:02.45
+Mängija a sisestas käigu ruudule ||2020-04-27 14:04:02.734
+Mängija a võitis.||2020-04-27 14:04:02.735
+Mängija a sisestas käigu ruudule ||2020-04-27 14:04:05.152
+Mängija a võitis.||2020-04-27 14:04:05.153
+Mängija a sisestas käigu ruudule ||2020-04-27 14:05:07.563
+Mängija b sisestas käigu ruudule ||2020-04-27 14:05:07.782
+Mängija a sisestas käigu ruudule ||2020-04-27 14:05:08.021
+Mängija b sisestas käigu ruudule ||2020-04-27 14:05:08.216
+Mängija a sisestas käigu ruudule ||2020-04-27 14:05:08.854
+Mängija a võitis.||2020-04-27 14:05:08.855
+Mängija Peeter sisestas käigu ruudule ||2020-04-27 14:06:40.365
+Mängija Meeter sisestas käigu ruudule ||2020-04-27 14:06:40.871
+Mängija Peeter sisestas käigu ruudule ||2020-04-27 14:06:41.65
+Mängija Meeter sisestas käigu ruudule ||2020-04-27 14:06:42.267
+Mängija Peeter sisestas käigu ruudule ||2020-04-27 14:06:43.0
+Mängija Peeter võitis.||2020-04-27 14:06:43.001
+Mängija a sisestas käigu ruudule ||2020-04-27 14:08:37.714
+Mängija b sisestas käigu ruudule ||2020-04-27 14:08:39.638
+Mängija a sisestas käigu ruudule ||2020-04-27 14:08:40.192
+Mängija Arno sisestas käigu ruudule ||2020-04-27 14:11:21.45
+Mängija Parno sisestas käigu ruudule ||2020-04-27 14:11:21.762
+Mängija Arno sisestas käigu ruudule ||2020-04-27 14:11:22.08
+Mängija Parno sisestas käigu ruudule ||2020-04-27 14:11:22.426
+Mängija Arno sisestas käigu ruudule ||2020-04-27 14:11:22.708
+Mängija Arno võitis.||2020-04-27 14:11:22.709

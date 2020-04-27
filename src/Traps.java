@@ -31,7 +31,6 @@ public class Traps extends Application {
     private Label võitja = new Label();
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
-    Object[] valikud = {"Välju"};
     @Override
     public void start(Stage pealava) throws Exception {
         GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
@@ -51,26 +50,7 @@ public class Traps extends Application {
         pealava.setScene(stseen);
         pealava.show();
     }
-    public void logitamine(String mängija, int staatus) {
-        File logi = new File("logi.txt");
-        try {
-            if(staatus == 0){
-                if (!logi.exists()) {
-                    logi.createNewFile();
-                }
-                PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
-                kirjuta.append("Mängija " + mängija + " sisestas käigu ruudule " + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
-                kirjuta.close();}
-            else{
-                PrintWriter kirjuta = new PrintWriter(new FileWriter(logi, true));
-                kirjuta.append("Mängija " + mängija + " võitis." + "||" + new java.sql.Timestamp(System.currentTimeMillis()) + "\n");
-                kirjuta.close();
-            }
 
-        } catch (IOException e) {
-            System.out.println("Logi error");
-        }
-    }
 
     // Meetod, mis käib kõik ruudud läbi ning vaatab, kas mingi koht on veel tühi ja kui ei ole, siis tagastab true.
     public boolean kasLaudOnTäis() {
@@ -110,49 +90,38 @@ public class Traps extends Application {
             setStyle("-fx-border-color: black");
             this.setPrefSize(600,600);
             this.setOnMouseClicked(e -> NupuVajutus());
-        }
-        private void lõpp(char kumb) {
-            if (kumb == 'X' || kumb == 'O') {
-                int valik = JOptionPane.showOptionDialog(null, "Mängu võitis " + kumb, kumb + " võitis!",
-                        JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
-                if (valik == JOptionPane.YES_OPTION) {
-                    System.exit(0);
-                }
-            } else {
-                int valik = JOptionPane.showOptionDialog(null, "Keegi ei võitnud! Olete samatublid :)", "Viik!",
-                        JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null, valikud, null);
-                if (valik == JOptionPane.YES_OPTION) {
-                    System.exit(0);
-                }
-            }
+
         }
 
+
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
-        private void NupuVajutus() {// Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
+        private void NupuVajutus() {
+            if(mängija == ' ' && praeguneMängija != ' '){ // Kui mängija on tühi, aga praegune mängija ei ole tühi, siis ütleb, et on praeguse mängija kord.
                 setMängija(praeguneMängija);
                 if(kasVõitis(praeguneMängija)){ // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                     if(Character.valueOf(praeguneMängija)=='X') {//Kui võitja on esimene mängija, salvestab selle logisse.
                         staatus.setText(esimene + " võitis!");
-                        logitamine(esimene, 1);
-                        lõpp(praeguneMängija);
+                        Logitamine.logitamine(esimene, 1);
+                        Lõpuekraan.lõpp(praeguneMängija);
                     }
                     else{//Logitab teise mängija võidu korral.
                         staatus.setText(teine + " võitis!");
-                        logitamine(teine, 1);
-                        lõpp(praeguneMängija);
+                        Logitamine.logitamine(teine, 1);
+                        Lõpuekraan.lõpp(praeguneMängija);
                     }
 
                 }
                 else if(kasLaudOnTäis()){ // Kontrollib, kas mängulaud on täis.
                     staatus.setText("Viik!");
                     praeguneMängija = ' ';
-                    lõpp(praeguneMängija);
+                    Lõpuekraan.lõpp(praeguneMängija);
                 }
                 else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
                     praeguneMängija = (praeguneMängija == 'X') ? 'O': 'X'; // Kui mäng peaks jätkama, siis vaatab kelle kord on ning kuvab selle ekraanile.
                     if(praeguneMängija=='X') staatus.setText(esimene + " peab käima");
                     else staatus.setText(teine + " peab käima");
                 }
+            }
         }
 
         public char getMängija() {
@@ -172,7 +141,7 @@ public class Traps extends Application {
                 joon2.startYProperty().bind(this.heightProperty().subtract(10));
                 joon2.setStrokeWidth(10.3);
                 joon2.setStroke(Color.DODGERBLUE);
-                logitamine(esimene, 0);
+                Logitamine.logitamine(esimene, 0);
                 getChildren().addAll(joon1,joon2);
             } else if (mängija == 'O') {
                 Ellipse ring = new Ellipse(this. getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2-10, this.getHeight() / 2 - 10);
@@ -183,7 +152,7 @@ public class Traps extends Application {
                 ring.setStroke(Color.DODGERBLUE);
                 ring.setStrokeWidth(5.0);
                 ring.setFill(Color.HOTPINK);
-                logitamine(teine, 0);
+                Logitamine.logitamine(teine, 0);
                 getChildren().add(ring);
             }
         }
