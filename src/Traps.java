@@ -12,20 +12,22 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Traps extends Application {
     private char praeguneMängija = 'X';
     private Laud[][] ruut = new Laud[3][3];
     private Label staatus = new Label("Käik on mängijal: " + esimene);
-
+    private List<Character> käigud = new ArrayList();
     static String esimene = JOptionPane.showInputDialog("Esimese mängija nimi (X): "); //Laseb sisestada mängijate nimed,
     static String teine = JOptionPane.showInputDialog("Teise mängija nimi (O): ");//mis hiljem logisse kirja lähevad.
 
     @Override
     public void start(Stage pealava) throws Exception {
         reegel();
-        GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruudud.
+        GridPane pane = new GridPane();  // Kasutan Gridpane, et väljastada ruutude asendid.
 
         for (int i = 0; i < 3; i++) {    // Fikseerin ruutude positsioonin. (i on rea indeks, j on veeru indeks)
             for (int j = 0; j < 3; j++) {
@@ -33,7 +35,7 @@ public class Traps extends Application {
                 pane.add(ruut[i][j], j, i);
             }
         }
-        BorderPane border = new BorderPane(); // n-ö Main konteiner.
+        BorderPane border = new BorderPane(); // n-ö põhikonteiner.
         border.setCenter(pane);
         border.setBottom(staatus);
         Scene stseen = new Scene(border, 600, 600);
@@ -87,6 +89,10 @@ public class Traps extends Application {
 
         // Meetod, mis tegutseb siis kui toimub nupuvajutus.
         private void NupuVajutus() {
+            if (käigud.contains(mängija)) {
+                staatus.setText("See koht on võetud käi mujale.");
+                return;
+            }
             setMängija(praeguneMängija);
             if (kasVõitis(praeguneMängija)) { // Kontrollib, kas praegu mängija oma kõiguga võitis või ei
                 if (Character.valueOf(praeguneMängija) == 'X') {//Kui võitja on esimene mängija, salvestab selle logisse.
@@ -130,6 +136,7 @@ public class Traps extends Application {
                 joon2.setStroke(Color.DODGERBLUE);
                 Logitamine.logitamine(esimene, 0);
                 getChildren().addAll(joon1, joon2);
+                käigud.add(mängija);
             } else if (mängija == 'O') {
                 Ellipse ring = new Ellipse(this.getWidth() / 2, this.getHeight() / 2, this.getWidth() / 2 - 10, this.getHeight() / 2 - 10);
                 ring.centerXProperty().bind(this.widthProperty().divide(2));
@@ -141,6 +148,7 @@ public class Traps extends Application {
                 ring.setFill(Color.HOTPINK);
                 Logitamine.logitamine(teine, 0);
                 getChildren().add(ring);
+                käigud.add(mängija);
             }
         }
 
