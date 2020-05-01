@@ -144,3 +144,12 @@ Mängija b sisestas käigu ruudule ||2020-04-30 18:34:14.187
 Mängija g sisestas käigu ruudule ||2020-04-30 18:34:14.835
 Mängija b sisestas käigu ruudule ||2020-04-30 18:34:17.859
 Mängija b võitis.||2020-04-30 18:34:17.86
+Mängija b sisestas käigu ruudule ||2020-04-30 18:40:26.286
+Mängija s sisestas käigu ruudule ||2020-04-30 18:40:28.238
+Mängija b sisestas käigu ruudule ||2020-04-30 18:40:31.427
+Mängija s sisestas käigu ruudule ||2020-04-30 18:40:32.371
+Mängija b sisestas käigu ruudule ||2020-04-30 18:40:33.442
+Mängija s sisestas käigu ruudule ||2020-04-30 18:40:34.732
+Mängija b sisestas käigu ruudule ||2020-04-30 18:40:36.091
+Mängija  sisestas käigu ruudule ||2020-04-30 18:51:45.965
+Mängija  sisestas käigu ruudule ||2020-04-30 18:51:46.343
