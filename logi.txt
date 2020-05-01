@@ -439,3 +439,33 @@ Mängija a sisestas käigu ruudule ||2020-04-27 18:59:34.224
 Mängija b sisestas käigu ruudule ||2020-04-27 18:59:34.555
 Mängija a sisestas käigu ruudule ||2020-04-27 18:59:34.803
 Mängija a võitis.||2020-04-27 18:59:34.804
+Mängija a sisestas käigu ruudule ||2020-04-30 18:37:20.034
+Mängija b sisestas käigu ruudule ||2020-04-30 18:37:22.327
+Mängija a sisestas käigu ruudule ||2020-04-30 18:37:23.556
+Mängija b sisestas käigu ruudule ||2020-04-30 18:37:26.271
+Mängija a sisestas käigu ruudule ||2020-04-30 18:37:26.691
+Mängija a võitis.||2020-04-30 18:37:26.693
+Mängija a sisestas käigu ruudule ||2020-05-01 14:49:34.482
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:11.187
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:11.424
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:11.659
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:12.084
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:12.834
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:13.672
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:14.051
+Mängija a võitis.||2020-05-01 14:57:14.052
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:23.854
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:24.061
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:24.359
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:24.675
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:25.981
+Mängija a võitis.||2020-05-01 14:57:25.981
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:33.859
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:34.326
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:35.008
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:37.649
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:38.064
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:38.807
+Mängija a sisestas käigu ruudule ||2020-05-01 14:57:39.747
+Mängija b sisestas käigu ruudule ||2020-05-01 14:57:40.53
+Mängija b võitis.||2020-05-01 14:57:40.531

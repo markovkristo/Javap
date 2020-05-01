@@ -7,14 +7,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-
+//Klass, mis loob reeglite akna enne mängu algust.
 public class Reeglid extends Application {
 
     public static void display(String title){
-        Stage aken = new Stage();
-        aken.initModality(Modality.APPLICATION_MODAL);
+        Stage aken = new Stage();   //Ehitab uue akna, kuhu tulevad reeglid.
+        aken.initModality(Modality.APPLICATION_MODAL); //Kui reegilte aken on veel lahti, ei saa mängu alustada.
         aken.setTitle(title);
         aken.setMinWidth(600);
 
@@ -26,13 +24,12 @@ public class Reeglid extends Application {
                 " siis on ta mängu võitnud.");
 
         sisu.setStyle("-fx-font-family: 'DejaVu Sans', Verdana, Helvetica, sans-serif");
-        Button closeButton = new Button("Mängi!");
-        String[] args = new String[] {};
+        Button closeButton = new Button("Mängi!");//Kui vajutada nuppu "Mängi!", alustab mängu.
         closeButton.setOnAction(e -> {aken.close();});
 
 
         Label pealkiri = new Label();
-        pealkiri.setText("Reeglid");
+        pealkiri.setText("Reeglid");//Akna pealkiri.
         pealkiri.setStyle("-fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif");
 
         VBox uus = new VBox();
@@ -43,7 +40,7 @@ public class Reeglid extends Application {
 
         Scene scene = new Scene(uus, 600, 600);
         aken.setScene(scene);
-        aken.showAndWait();
+        aken.showAndWait();//Programm ei lähe edasi, kuni reeglite aken on suletud.
     }
 
     @Override
