@@ -35,7 +35,7 @@ public class Traps extends Application {
                 pane.add(ruut[i][j], j, i);
             }
         }
-        BorderPane border = new BorderPane(); // n-ö põhikonteiner.
+        BorderPane border = new BorderPane(); // BorderPane-ga määran, kus element täpselt asub.
         border.setCenter(pane);
         border.setBottom(staatus);
         Scene stseen = new Scene(border, 600, 600);
@@ -77,7 +77,7 @@ public class Traps extends Application {
 
     public class Laud extends Pane {
         private char mängija = ' ';
-        
+
         public Laud() {
             setStyle("-fx-border-color: black");
             this.setPrefSize(600, 600);
