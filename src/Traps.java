@@ -77,8 +77,7 @@ public class Traps extends Application {
 
     public class Laud extends Pane {
         private char mängija = ' ';
-
-        // Konstruktor
+        
         public Laud() {
             setStyle("-fx-border-color: black");
             this.setPrefSize(600, 600);
@@ -98,7 +97,7 @@ public class Traps extends Application {
                 if (Character.valueOf(praeguneMängija) == 'X') { //Kui võitja on esimene mängija, salvestab selle logisse.
                     staatus.setText(esimene + " võitis!");
                     Logitamine.logitamine(esimene, 1);
-                    Lõpuekraan.lõpp(praeguneMängija);
+                    Lõpuekraan.lõpp(praeguneMängija); // Lõpuekraani kuvamisega on väikene bug, sest viimane käik ilmub alles peale lõpuekraani ilmumist.
                 } else {//Logitab teise mängija võidu korral.
                     staatus.setText(teine + " võitis!");
                     Logitamine.logitamine(teine, 1);
@@ -110,7 +109,7 @@ public class Traps extends Application {
                 praeguneMängija = ' ';
                 Lõpuekraan.lõpp(praeguneMängija);
             } else { // Kui mängulaud pole täis ning kumbki pole võitnud, siis on järgmise inimese kord
-                praeguneMängija = (praeguneMängija == 'X') ? 'O' : 'X'; // Kui mäng peaks jätkama, siis vahetab praeguse mängija ära.
+                praeguneMängija = (praeguneMängija == 'X') ? 'O' : 'X'; // Kui mäng jätkub, siis vahetab praeguse mängija ära.
                 if (praeguneMängija == 'X') staatus.setText(esimene + " peab käima");
                 else staatus.setText(teine + " peab käima");
             }
